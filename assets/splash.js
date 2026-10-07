@@ -11,7 +11,7 @@
   var INK = '#D02A62', PINK = '#E93971', NAIL = '#F9A3B6';
   var STAR = 'M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0z';
   var APERTURE = 'M40 460V170A110 110 0 0 1 260 170V460Z';
-  var en = (document.documentElement.lang || '').indexOf('en') === 0;
+  var SKIP = { fr: 'Passer ›', es: 'Saltar ›', it: 'Salta ›' }[(document.documentElement.lang || 'en').slice(0, 2)] || 'Skip ›';
   var W = window.innerWidth, H = window.innerHeight, dpr = Math.min(2, window.devicePixelRatio || 1), rnd = Math.random;
 
   // The window is drawn in a 300 x 520 unit space and scaled to fit the screen
@@ -69,7 +69,7 @@
     '<div class="nn-sash nn-sash-r"><canvas></canvas>' + sashSvg('r') + '</div></div>' + wall + '</div>' +
     '<canvas class="nn-mist"></canvas>' +
     '<div class="nn-bottle"><img src="/assets/spray.svg" alt="" width="492" height="579"></div>' +
-    '<button class="nn-skip" type="button" tabindex="-1">' + (en ? 'Skip ›' : 'Passer ›') + '</button>';
+    '<button class="nn-skip" type="button" tabindex="-1">' + SKIP + '</button>';
   document.body.appendChild(d);
   root.classList.add('nn-splashing');
 
