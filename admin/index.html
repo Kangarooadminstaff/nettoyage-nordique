@@ -4,14 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Admin | Nettoyage Nordique MTL</title>
+  <title>Éclat | Nettoyage Nordique MTL</title>
   <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
-  <!-- Admin entry point: forwards to the business app. Only Alicia's Google account can open the app itself. -->
-  <meta http-equiv="refresh" content="0; url=/facture/">
-  <script>location.replace('/facture/');</script>
-  <style>body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #F9EAF1; color: #6E5A62; }</style>
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <!-- Forwards to Éclat, the business app (Google Apps Script). Only Alicia's Google account can open it.
+       The old browser-only invoice tool is still at /facture/ancien/ in case anything was saved in it. -->
+  <meta http-equiv="refresh" content="0; url=https://script.google.com/a/macros/nettoyagenordique.com/s/AKfycbwReecBTNUcGyxx6O0QB0Fv9lrkuNO7-bznLnEof4vJtByWwx92hpItk2hgRYz7aiHQ/exec">
+  <script>location.replace('https://script.google.com/a/macros/nettoyagenordique.com/s/AKfycbwReecBTNUcGyxx6O0QB0Fv9lrkuNO7-bznLnEof4vJtByWwx92hpItk2hgRYz7aiHQ/exec');</script>
+  <style>body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: system-ui, sans-serif; background: #F9EAF1; color: #6E5A62; } a { color: #D02A62; font-weight: 700; }</style>
 </head>
 <body>
-  <p>Ouverture de l’espace admin… <a href="/facture/" style="color:#D02A62">Continuer</a></p>
+  <p>Ouverture d’Éclat… <a href="https://script.google.com/a/macros/nettoyagenordique.com/s/AKfycbwReecBTNUcGyxx6O0QB0Fv9lrkuNO7-bznLnEof4vJtByWwx92hpItk2hgRYz7aiHQ/exec">Continuer</a></p>
 </body>
 </html>
