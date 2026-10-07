@@ -105,6 +105,18 @@ p { margin: 0 0 1em; }
 .s3 { width: 28px; height: 28px; top: 120px; right: 10%; }
 .s4 { width: 16px; height: 16px; top: 190px; right: 16%; opacity: .35; }
 
+/* Magic broom sweeping along the bottom edge of the hero (dust comes from assets/broom.js) */
+.hero { padding-bottom: 108px; }
+.sweep { position: absolute; left: 0; right: 0; bottom: 0; height: 120px; pointer-events: none; }
+.broom { position: absolute; bottom: 0; left: -110px; width: 96px; height: 96px; animation: broom-go 11s linear 3s infinite; }
+.broom svg { display: block; width: 100%; height: 100%; transform-origin: 80% 10%; filter: drop-shadow(0 4px 4px rgba(208, 42, 98, .18)); animation: broom-swish .45s ease-in-out infinite alternate; }
+@keyframes broom-go { 0% { left: -110px; } 42%, 100% { left: calc(100% + 30px); } }
+@keyframes broom-swish { from { transform: rotate(-9deg); } to { transform: rotate(7deg) translateY(-2px); } }
+.dust { position: absolute; width: var(--s); height: var(--s); border-radius: 50%; background: var(--pink-soft); transform: translate(-50%, -50%) scale(.3); animation: dust 1s ease-out forwards; }
+.dust-star { border-radius: 0; background: none; color: var(--pink); }
+.dust-star svg { display: block; width: 100%; height: 100%; }
+@keyframes dust { 0% { opacity: 1; transform: translate(-50%, -50%) scale(.3); } 100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1) rotate(70deg); } }
+
 /* Promises */
 
 .promises {
@@ -334,4 +346,6 @@ p { margin: 0 0 1em; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
   .about-spark { animation: none; }
+  .broom { animation: none; left: auto; right: 8%; }
+  .broom svg { animation: none; }
 }
