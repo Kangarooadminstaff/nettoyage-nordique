@@ -38,7 +38,25 @@ p { margin: 0 0 1em; }
 
 /* Top bar */
 
-.topbar { display: flex; justify-content: flex-end; padding: 18px 0; }
+.topbar { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 18px 0; }
+
+/* Admin login (Google sign-in + PIN on the other side) */
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .75);
+  color: var(--pink-deep);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-decoration: none;
+}
+.admin-link svg { width: 14px; height: 14px; }
+.admin-link:hover { background: var(--blush); }
 
 .lang {
   display: inline-flex;
