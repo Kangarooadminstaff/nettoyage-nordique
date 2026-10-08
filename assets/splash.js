@@ -1,11 +1,15 @@
 /* Opening splash: a toon Victorian window with foggy glass. The spray bottle cleans the fanlight and both casements,
    a squeegee shine finishes the job (the website shows through the clean glass), sparkles pop, then the casements
-   swing open and we fly through the window onto the page. About 3.4 s, once per visit, skipped for reduced motion.
+   swing open and we fly through the window onto the page. About 3.4 s, plays every time the site is opened, but not
+   when moving between pages of the site (e.g. switching language), and never for reduced motion.
    Tap or any key skips it, and CSS fades it out on its own if this script stalls. */
 (function () {
   try {
-    if (sessionStorage.getItem('nn-splash') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    sessionStorage.setItem('nn-splash', '1');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+    var reload = nav ? nav.type === 'reload' : false;
+    if (!reload && document.referrer && new URL(document.referrer).host === location.host) return; // moving between pages of the site
+    if (sessionStorage.getItem('nn-splash-test')) return; // lets audits screenshot the page without the intro
   } catch (e) { return; }
 
   var INK = '#D02A62', PINK = '#E93971', NAIL = '#F9A3B6';
