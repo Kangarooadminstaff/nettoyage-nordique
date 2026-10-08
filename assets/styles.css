@@ -345,3 +345,6 @@ p { margin: 0 0 1em; }
   *, *::before, *::after { transition: none !important; }
   .about-spark { animation: none; }
 }
+
+/* Keeps phone numbers in one piece when a button wraps */
+.nowrap { white-space: nowrap; }
