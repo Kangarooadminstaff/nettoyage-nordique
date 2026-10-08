@@ -3,28 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found | Nettoyage Nordique MTL</title>
   <meta name="robots" content="noindex">
+  <title>Nettoyage Nordique MTL</title>
+  <meta name="theme-color" content="#E93971">
   <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/icon-512.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap">
-  <link rel="stylesheet" href="/assets/styles.css?v=8">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap">
+  <style>
+    /* Holding page while the full website is offline (the full site is on the full-site branch) */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { display: grid; place-items: center; margin: 0; padding: 32px 20px; background: linear-gradient(180deg, #fff 0%, #F9EAF1 100%); color: #1F1F1F; font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; text-align: center; }
+    main { display: grid; justify-items: center; gap: 14px; max-width: 460px; }
+    img { width: 200px; max-width: 60vw; height: auto; margin-bottom: 8px; }
+    h1 { margin: 0; font-size: 1.5rem; font-weight: 800; line-height: 1.25; text-wrap: balance; }
+    p { margin: 0; color: #6E5A62; font-weight: 500; line-height: 1.5; }
+    a { color: #D02A62; font-weight: 700; text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+  </style>
 </head>
 <body>
-  <main class="error">
-    <div>
-      <img src="/assets/logo.svg" width="1056" height="908" alt="Nettoyage Nordique MTL">
-      <h1>Page not found</h1>
-      <p><span lang="fr">Page introuvable</span> · <span lang="es">Página no encontrada</span> · <span lang="it">Pagina non trovata</span></p>
-      <div class="actions">
-        <a class="btn btn-pink" href="/">Home</a>
-        <a class="btn btn-outline" href="/fr/" lang="fr">Accueil</a>
-        <a class="btn btn-outline" href="/es/" lang="es">Inicio</a>
-        <a class="btn btn-outline" href="/it/" lang="it">Pagina iniziale</a>
-      </div>
-    </div>
+  <main>
+    <img src="/assets/logo.svg" width="1056" height="908" alt="Nettoyage Nordique MTL">
+    <h1>Our new website is coming soon.</h1>
+    <p lang="fr-CA">Notre nouveau site arrive bientôt.</p>
+    <p><a href="mailto:info@nettoyagenordique.com">info@nettoyagenordique.com</a> · <a href="tel:+14385459299">(438) 545-9299</a></p>
   </main>
 </body>
 </html>

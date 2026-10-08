@@ -1,6 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /facture/
-Disallow: /admin/
-
-Sitemap: https://www.nettoyagenordique.com/sitemap.xml
+Disallow: /
